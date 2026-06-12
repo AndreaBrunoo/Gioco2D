@@ -1,0 +1,72 @@
+{
+  "VersioneGioco": "1.0.0",
+  "Timestamp": "2026-06-04T16:40:07.7735821+02:00",
+  "Personaggio": {
+    "Nome": "Samuel",
+    "SaluteMassima": 120,
+    "SaluteAttuale": 115,
+    "Attacco": 15,
+    "Difesa": 10,
+    "Velocita": 5,
+    "Livello": 1,
+    "Esperienza": 0,
+    "Mosse": [
+      {
+        "Nome": "Fendente",
+        "PotenzaBase": 10,
+        "PrecisioneBase": 100,
+        "ProbabilitaCritico": 10
+      }
+    ],
+    "Inventario": [
+      {
+        "Oggetto": {
+          "Nome": "Pozione",
+          "BonusAttacco": 0,
+          "BonusDifesa": 0,
+          "BonusVelocita": 0,
+          "BonusSalute": 0,
+          "Categoria": 0
+        },
+        "Quantita": 1
+      }
+    ],
+    "Equipaggiamenti": {
+      "MosseEquipaggiate": [
+        {
+          "Nome": "Fendente",
+          "PotenzaBase": 10,
+          "PrecisioneBase": 100,
+          "ProbabilitaCritico": 10
+        },
+        null,
+        null
+      ],
+      "Arma": {
+        "Oggetto": {
+          "Nome": "Bastone",
+          "BonusAttacco": 0,
+          "BonusDifesa": 0,
+          "BonusVelocita": 0,
+          "BonusSalute": 0,
+          "Categoria": 7
+        },
+        "Quantita": 1
+      },
+      "Elmo": null,
+      "Corazza": null,
+      "Gambali": null,
+      "Stivali": null
+    },
+    "Monete": 0,
+    "PosX": 4,
+    "PosY": 5
+  },
+  "AreaCorrente": "Foresta Tutorial",
+  "PosizioneX": 5,
+  "PosizioneY": 5,
+  "BossSconfitti": [],
+  "OggettiRaccolti": [],
+  "NemiciEliminati": [],
+  "EventiCompletati": []
+}

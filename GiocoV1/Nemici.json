@@ -1,0 +1,94 @@
+{
+  "Sezioni": {
+    "Foresta Tutorial": {
+      "ProbabilitaSpawn": 10,
+      "CelleBoss": [
+        {
+          "X": 8,
+          "Y": 8
+        }
+      ],
+      "Nemici": [
+        {
+          "Nome": "Lupo",
+          "ProbabilitaSpawn": 50,
+          "SaluteMassima": 70,
+          "Attacco": 5,
+          "Difesa": 2,
+          "Velocita": 3,
+          "Livello": 1,
+          "NomiMosse": [
+            "Frustata"
+          ],
+          "NomiOggetti": [
+            {
+              "Nome": "Pozione Curativa",
+              "Quantita": 5
+            },
+            {
+              "Nome": "Dente di Lupo",
+              "Quantita": 5
+            }
+          ]
+        },
+        {
+          "Nome": "Goblin",
+          "ProbabilitaSpawn": 30,
+          "SaluteMassima": 70,
+          "Attacco": 4,
+          "Difesa": 1,
+          "Velocita": 4,
+          "Livello": 1,
+          "NomiMosse": [
+            "Frustata"
+          ],
+          "NomiOggetti": [
+            {
+              "Nome": "Pozione Curativa",
+              "Quantita": 5
+            }
+          ]
+        },
+        {
+          "Nome": "Ragno Gigante",
+          "ProbabilitaSpawn": 20,
+          "SaluteMassima": 70,
+          "Attacco": 6,
+          "Difesa": 3,
+          "Velocita": 2,
+          "Livello": 2,
+          "NomiMosse": [
+            "Frustata"
+          ],
+          "NomiOggetti": [
+            {
+              "Nome": "Pozione Curativa",
+              "Quantita": 5
+            }
+          ]
+        }
+      ],
+      "Boss": {
+        "Nome": "Re dei Lupi",
+        "SaluteMassima": 100,
+        "Attacco": 12,
+        "Difesa": 5,
+        "Velocita": 4,
+        "Livello": 5,
+        "NomiMosse": [
+          "Frustata"
+        ],
+          "NomiOggetti": [
+            {
+              "Nome": "Pozione Curativa",
+              "Quantita": 2
+            },
+            {
+              "Nome": "Dente di Lupo",
+              "Quantita": 5
+            }
+          ]
+      }
+    }
+  }
+}

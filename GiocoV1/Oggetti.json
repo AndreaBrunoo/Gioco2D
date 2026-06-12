@@ -1,0 +1,108 @@
+{
+  "Consumabili": [
+    {
+      "Nome": "Pozione Curativa",
+      "BonusSalute": 10,
+      "ProbabilitaDrop": 100
+    },
+    {
+      "Nome": "Pozione Curativa Grande",
+      "BonusSalute": 25,
+      "ProbabilitaDrop": 100
+    }
+  ],
+  "Offensivi": [
+    {
+      "Nome": "Shuriken",
+      "BonusAttacco": 2,
+      "BonusVelocita": 5,
+      "ProbabilitaDrop": 100
+    },
+    {
+      "Nome": "Coltello da lancio",
+      "BonusAttacco": 3,
+      "BonusVelocita": 3,
+      "ProbabilitaDrop": 100
+    }
+  ],
+  "Materiali": [
+    {
+      "Nome": "Erba Medicinale",
+      "ProbabilitaDrop": 100
+    },
+    {
+      "Nome": "Minerale di Ferro",
+      "ProbabilitaDrop": 100
+    },
+    {
+      "Nome": "Dente di Lupo",
+      "ProbabilitaDrop": 100
+    }
+  ],
+  "Equipaggiamenti": {
+    "Elmi": [
+      {
+        "Nome": "Elmo di Cuoio",
+        "BonusDifesa": 1,
+        "ProbabilitaDrop": 100
+      },
+      {
+        "Nome": "Elmo di Ferro",
+        "BonusDifesa": 3,
+        "ProbabilitaDrop": 100
+      }
+    ],
+    "Corazze": [
+      {
+        "Nome": "Corazza di Cuoio",
+        "BonusDifesa": 2,
+        "ProbabilitaDrop": 100
+      },
+      {
+        "Nome": "Corazza di Ferro",
+        "BonusDifesa": 5,
+        "BonusVelocita": -1,
+        "ProbabilitaDrop": 100
+      }
+    ],
+    "Gambali": [
+      {
+        "Nome": "Gambali di Cuoio",
+        "BonusDifesa": 1,
+        "ProbabilitaDrop": 100
+      },
+      {
+        "Nome": "Gambali di Ferro",
+        "BonusDifesa": 3,
+        "BonusVelocita": -1,
+        "ProbabilitaDrop": 100
+      }
+    ],
+    "Stivali": [
+      {
+        "Nome": "Stivali di Cuoio",
+        "BonusVelocita": 1,
+        "ProbabilitaDrop": 100
+      },
+      {
+        "Nome": "Stivali Rinforzati",
+        "BonusVelocita": 2,
+        "BonusDifesa": 1,
+        "ProbabilitaDrop": 100
+      }
+    ],
+    "Armi": [
+      {
+        "Nome": "Spada di Bronzo",
+        "BonusAttacco": 4,
+        "ProbabilitaDrop": 100
+      },
+      {
+        "Nome": "Ascia Pesante",
+        "BonusAttacco": 6,
+        "BonusVelocita": -1,
+        "ProbabilitaDrop": 100
+      }
+    ]
+  }
+}

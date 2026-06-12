@@ -1,0 +1,87 @@
+{
+  "VersioneGioco": "1.0.0",
+  "Timestamp": "2026-06-10T11:23:31.4701286+02:00",
+  "Personaggio": {
+    "Nome": "Samuel",
+    "SaluteMassima": 120,
+    "SaluteAttuale": 111,
+    "Attacco": 15,
+    "Difesa": 10,
+    "Velocita": 5,
+    "Livello": 1,
+    "Esperienza": 5,
+    "Mosse": [
+      {
+        "Nome": "Fendente",
+        "PotenzaBase": 10,
+        "PrecisioneBase": 100,
+        "ProbabilitaCritico": 10
+      }
+    ],
+    "Inventario": [
+      {
+        "Oggetto": {
+          "Nome": "Pozione",
+          "BonusAttacco": 0,
+          "BonusDifesa": 0,
+          "BonusVelocita": 0,
+          "BonusSalute": 0,
+          "ProbabilitaDrop": 0,
+          "Categoria": 0
+        },
+        "Quantita": 1
+      },
+      {
+        "Oggetto": {
+          "Nome": "Pozione Curativa",
+          "BonusAttacco": 0,
+          "BonusDifesa": 0,
+          "BonusVelocita": 0,
+          "BonusSalute": 10,
+          "ProbabilitaDrop": 100,
+          "Categoria": 0
+        },
+        "Quantita": 2
+      }
+    ],
+    "Equipaggiamenti": {
+      "MosseEquipaggiate": [
+        {
+          "Nome": "Fendente",
+          "PotenzaBase": 10,
+          "PrecisioneBase": 100,
+          "ProbabilitaCritico": 10
+        },
+        null,
+        null
+      ],
+      "Arma": {
+        "Oggetto": {
+          "Nome": "Bastone",
+          "BonusAttacco": 0,
+          "BonusDifesa": 0,
+          "BonusVelocita": 0,
+          "BonusSalute": 0,
+          "ProbabilitaDrop": 0,
+          "Categoria": 7
+        },
+        "Quantita": 1
+      },
+      "Elmo": null,
+      "Corazza": null,
+      "Gambali": null,
+      "Stivali": null
+    },
+    "Monete": 4,
+    "PuntiAbilita": 0,
+    "PosX": 6,
+    "PosY": 6
+  },
+  "AreaCorrente": "Foresta Tutorial",
+  "PosizioneX": 5,
+  "PosizioneY": 5,
+  "BossSconfitti": [],
+  "OggettiRaccolti": [],
+  "NemiciEliminati": [],
+  "EventiCompletati": []
+}

@@ -1,0 +1,89 @@
+{
+  "Nome": "Mappa Principale",
+  "Sezioni": [
+    {
+      "Nome": "Foresta Tutorial",
+      "Larghezza": 10,
+      "Altezza": 10,
+      "Celle": [
+        {
+          "x": 5,
+          "y": 5,
+          "Nome": "Radura",
+          "Descrizione": "Una radura tranquilla."
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "Nome": "Sentiero Sud",
+          "Descrizione": "Un sentiero che porta verso sud."
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "Nome": "Sentiero Nord",
+          "Descrizione": "Un sentiero che porta verso nord."
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "Nome": "Sentiero Ovest",
+          "Descrizione": "Un sentiero che porta verso ovest."
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "Nome": "Sentiero Est",
+          "Descrizione": "Un sentiero che porta verso est."
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "Nome": "Bosco Fitto",
+          "Descrizione": "Alberi fitti che oscurano la luce."
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "Nome": "Uscita Nord",
+          "Descrizione": "Ingresso a Villaggio",
+          "CollegaA": {
+            "Sezione": "Villaggio",
+            "X": 2,
+            "Y": 2
+          }
+        }
+      ]
+    },
+    {
+      "Nome": "Villaggio",
+      "Larghezza": 10,
+      "Altezza": 10,
+      "Celle": [
+        {
+          "x": 2,
+          "y": 3,
+          "Nome": "Uscita Sud",
+          "Descrizione": "Ingresso a Foresta Tutorial",
+          "CollegaA": {
+            "Sezione": "Foresta Tutorial",
+            "X": 5,
+            "Y": 3
+          }
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "Nome": "Piazza",
+          "Descrizione": "Il centro del villaggio."
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "Nome": "Taverna",
+          "Descrizione": "Un posto accogliente."
+        }
+      ]
+    }
+  ]
+}
