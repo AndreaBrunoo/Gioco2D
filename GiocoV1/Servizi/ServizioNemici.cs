@@ -118,8 +118,16 @@ public static class ServizioNemici
     public static Entita? TentaSpawnNemico(
         Sezione sezione,
         CellaPosizionata cella,
-        ConfigNemici configurazioneNemici)
+        ConfigNemici configurazioneNemici,
+        ConfigNpc? configurazioneNpc = null)
     {
+        // 0) NPC fissi in mappa (se configurati)
+        if (configurazioneNpc != null)
+        {
+            var npc = ServizioNpc.OttieniNpcInCella(sezione, cella, configurazioneNpc);
+            if (npc != null)
+                return npc;
+        }
         if (!configurazioneNemici.Sezioni.TryGetValue(sezione.Nome, out var configurazione))
             return null;
 

@@ -1,0 +1,52 @@
+{
+  "Sezioni": {
+    "Villaggio": {
+      "Npc": [
+        {
+          "Nome": "Eldric il Saggio",
+          "Dialoghi": [
+            "La conoscenza è un arma molto potente."
+          ],
+          "Interagibile": true,
+          "Ruolo": "Guida",
+          "Inventario": [],
+          "NomiOggetti": []
+        },
+        {
+          "Nome": "Mira la Mercante",
+          "Dialoghi": [
+            "Dai un'occhiata alla mia merce.",
+            "Ho ciò che ti serve, al giusto prezzo."
+          ],
+          "Interagibile": true,
+          "Ruolo": "Mercante",
+          "NomiOggetti": [
+            { "Nome": "Pozione Vita", "Quantita": 3 },
+            { "Nome": "Pozione Mana", "Quantita": 2 }
+          ]
+        }
+      ],
+      "CelleNpc": [
+        { "X": 3, "Y": 2, "Nome": "Eldric il Saggio" },
+        { "X": 2, "Y": 2, "Nome": "Mira la Mercante" }
+      ]
+    },
+
+    "Foresta Tutorial": {
+      "Npc": [
+        {
+          "Nome": "Lyria la Druida",
+          "Dialoghi": [
+            "Benvenuto, viandante,",
+            "Io ti aiuterò durante il tuo lungo viaggio."
+          ],
+          "Interagibile": true,
+          "Ruolo": "Aiutante"
+        }
+      ],
+      "CelleNpc": [
+        { "X": 5, "Y": 5, "Nome": "Lyria la Druida" }
+      ]
+    }
+  }
+}

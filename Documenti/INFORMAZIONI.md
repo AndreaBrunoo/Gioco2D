@@ -172,6 +172,12 @@ Per ciascuna classe di Modelli elenco le proprietà (solo tipo + nome). I link p
 	- `int Velocita`
 
 - [StatoGioco.cs](../GiocoV1/Modelli/StatoGioco.cs)
+
+- [Npc.cs](../GiocoV1/Modelli/Npc.cs)
+- `Npc : Entita`
+	- `List<string> Dialoghi`
+	- `bool Interagibile`
+	- `string Ruolo`
 - `StatoGioco`
 	- `string VersioneGioco`
 	- `DateTime Timestamp`
@@ -239,6 +245,11 @@ Per ogni servizio elenco i metodi pubblici principali e i parametri richiesti (s
 	- `void ApplicaLevelUp(Personaggio personaggio)`
 
 - [ServizioClassiPersonaggio.cs](../GiocoV1/Servizi/ServizioClassiPersonaggio.cs)
+
+- [ServizioNpc.cs](../GiocoV1/Servizi/ServizioNpc.cs)
+- `ServizioNpc`
+	- `ConfigNpc CaricaNpc(string percorso)` — deserializza JSON npc.
+	- `Npc? OttieniNpcInCella(Sezione sezione, CellaPosizionata cella, ConfigNpc configurazioneNpc)` — restituisce un NPC se configurato nella cella.
 - `ServizioClassi` 
 	- `List<ClassePersonaggio> ClassiDisponibili { get; }` — elenco classi predefinite.
 	- `void ApplicaClasse(Personaggio p, ClassePersonaggio classe)`
@@ -345,6 +356,8 @@ I file JSON in radice contengono i dati caricati all’avvio:
 - [Mosse.json](../GiocoV1/Mosse.json) contiene i dettagli delle mosse presenti nel gioco, seguire [ConfigMosse.](../GiocoV1/Configurazioni/ConfigMosse.cs)
 - [Nemici.json](../GiocoV1/Nemici.json) contiene i nemici presenti nel gioco, seguire [ConfigNemici.](../GiocoV1/Configurazioni/ConfigNemici.cs)
 - [Oggetti.json](../GiocoV1/Oggetti.json) contiene tutti gli oggetti del gioco, seguire [ConfigOggetti](../GiocoV1/Configurazioni/ConfigOggetti.cs)
+
+- [npc.json](../GiocoV1/npc.json) contiene la configurazione degli NPC in mappa, seguire [ConfigNpc](../GiocoV1/Configurazioni/ConfigNpc.cs)
 
 Questi file permettono il bilanciamento senza toccare codice.
 
