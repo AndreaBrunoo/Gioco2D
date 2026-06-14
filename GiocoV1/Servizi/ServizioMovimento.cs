@@ -10,7 +10,7 @@ public class ServizioMovimento
 
     public ServizioMovimento(Cella?[,] griglia) { _griglia = griglia; }
 
-    public RisultatoMovimento Muovi(Personaggio personaggio, char direzione, Sezione sezione, ConfigNemici configNemici)
+    public RisultatoMovimento Muovi(Personaggio personaggio, char direzione, Sezione sezione, ConfigNemici configNemici, ConfigNpc? configNpc = null)
     {
         var cellaAttuale = _griglia[personaggio.PosY, personaggio.PosX]!;
 
@@ -19,7 +19,7 @@ public class ServizioMovimento
         {
             var risultato = new RisultatoMovimento();
             ImpostaMessaggiBase(risultato, cellaAttuale);
-            risultato.NemicoTrovato = null;
+            risultato.EntitaTrovata = null;
             return risultato;
         }
 
@@ -36,7 +36,7 @@ public class ServizioMovimento
         {
             var risultato = new RisultatoMovimento();
             ImpostaMessaggiBase(risultato, cellaAttuale);
-            risultato.NemicoTrovato = null;
+            risultato.EntitaTrovata = null;
             return risultato;
         }
 
@@ -44,7 +44,7 @@ public class ServizioMovimento
         {
             var risultato = new RisultatoMovimento();
             ImpostaMessaggiBase(risultato, cellaAttuale);
-            risultato.NemicoTrovato = null;
+            risultato.EntitaTrovata = null;
             return risultato;
         }
 
@@ -69,17 +69,17 @@ public class ServizioMovimento
         }
 
         // ⭐ TENTA LO SPAWN ⭐
-        var entita = ServizioNemici.TentaSpawnNemico(sezione, cellaPosizionata, configNemici);
+        var entita = ServizioNemici.TentaSpawnNemico(sezione, cellaPosizionata, configNemici, configNpc);
 
         ImpostaMessaggiBase(risultato2, cella);
 
         if (entita != null)
         {
-            risultato2.NemicoTrovato = entita;
+            risultato2.EntitaTrovata = entita;
             return risultato2;
         }
 
-        risultato2.NemicoTrovato = null;
+        risultato2.EntitaTrovata = null;
         return risultato2;
     }
 

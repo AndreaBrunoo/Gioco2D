@@ -337,6 +337,7 @@ class Program
         // 🔹 Assegno le mosse e gli oggetti ai nemici
         ServizioNemici.AssegnaMosse(configNemici);
         ServizioNemici.AssegnaOggetti(configNemici);
+        var configNpc = ServizioNpc.CaricaNpc("npc.json");
         // 🔹 Trovo la sezione corretta
         var sezione = mappa.Sezioni.First(s => s.Nome == stato.AreaCorrente);
         // 🔹 Creo la griglia per il movimento
@@ -373,7 +374,7 @@ class Program
                 bool continua = Menu(personaggio, stato, griglia);
                 if (!continua) return;
             }
-            var risultato = movimento.Muovi(personaggio, direzione, sezione, configNemici);
+            var risultato = movimento.Muovi(personaggio, direzione, sezione, configNemici, configNpc);
 
             // ⭐ CAMBIO SEZIONE SE SERVE
             if (risultato.Collegamento != null)
@@ -407,10 +408,22 @@ class Program
             };
             CicloForPerStampaCentrale(righeRisultato);
 
-            if (risultato.NemicoTrovato != null)
+            if (risultato.EntitaTrovata != null)
             {
-                var esito = ServizioIncontri.Incontro(personaggio, risultato.NemicoTrovato);
-                if (risultato.NemicoTrovato is Nemico nemico)
+                if (risultato.EntitaTrovata is Npc npc)
+                {
+                    int Y = Console.WindowHeight / 2 - npc.Dialoghi.Count / 2;
+                    foreach (var dialogo in npc.Dialoghi)
+                    {
+                        int X = Console.WindowWidth / 2 - dialogo.Length / 2;
+                        Console.SetCursorPosition(X, Y);
+                        Console.Write(dialogo);
+                    }
+                    DisegnaMiniMappa(griglia, personaggio.PosX, personaggio.PosY);
+                }
+
+                var esito = ServizioIncontri.Incontro(personaggio, risultato.EntitaTrovata);
+                if (risultato.EntitaTrovata is Nemico nemico)
                 {
                     if (esito == EsitoIncontro.Vittoria)
                         ServizioDrop.ApplicaDrop(personaggio, nemico, esito);
@@ -553,7 +566,7 @@ class Program
                     Console.WriteLine($"Salvato il: {DateTime.Now:dd/MM/yyyy HH:mm}");
                     TastoIndietro();
                     continue;
-                case '7': 
+                case '7':
                 case '8': return false;
                 case 'Q': return true;
                 case 'q': return true;
