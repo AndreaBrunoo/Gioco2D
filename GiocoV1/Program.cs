@@ -7,6 +7,7 @@ using GiocoV1.Enum;
 class Program
 {
     // Cose da fare
+    // aggiornare i documenti del branch Npc2
 
     // FARE IL SERVIZIO INCONTRO BOSS
     // FARE IN MODO CHE IL PERSONAGGIO IMPOSTI LA SUA PRIMA MOSSA TRAMITE TUTORIAL PER ORA è AUTOMATICO
@@ -492,23 +493,30 @@ class Program
                         switch (sceltaInventario)
                         {
                             case '1':
-                                MostraConsumabili(personaggio);
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Consumabile);
                                 continue;
                             case '2':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Offensivo);
                                 continue;
                             case '3':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Materiale);
                                 continue;
                             case '4':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Arma);
                                 continue;
                             case '5':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Elmo);
                                 continue;
                             case '6':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Corazza);
                                 continue;
                             case '7':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Gambali);
                                 continue;
                             case '8':
+                                MostraPerCategoria(personaggio, CategoriaOggetto.Stivali);
                                 continue;
-                            case 'Q': break;
+                            case 'Q':
                             case 'q': break;
                             default:
                                 continue;
@@ -527,18 +535,7 @@ class Program
                         TastoIndietro();
                         continue;
                     }
-                    foreach (var mossa in personaggio.Mosse)
-                    {
-                        int i = 1;
-                        string[] righeMossa =
-                        {
-                            "===== MOSSE =====",
-                            $"[{i}] {mossa.Nome}",
-                        };
-                        i++;
-                        CicloForPerStampaCentrale(righeMossa);
-                    }
-                    TastoIndietro();
+                    MostraMosse(personaggio);
                     continue;
                 case '4':
                 case '5':
@@ -553,7 +550,7 @@ class Program
                     Console.WriteLine($"Salvato il: {DateTime.Now:dd/MM/yyyy HH:mm}");
                     TastoIndietro();
                     continue;
-                case '7': 
+                case '7':
                 case '8': return false;
                 case 'Q': return true;
                 case 'q': return true;
@@ -700,7 +697,7 @@ class Program
     public static void MostraMessaggioCentratoWriteLine(string messaggio)
     {
         int x = Console.WindowWidth / 2 - messaggio.Length / 2;
-        int y = Console.CursorTop;
+        int y = Console.WindowHeight / 2;
 
         Console.SetCursorPosition(x, y);
         Console.WriteLine(messaggio);
@@ -719,11 +716,9 @@ class Program
         }
     }
 
-    static void MostraConsumabili(Personaggio personaggio)
+    public static void MostraMosse(Personaggio personaggio)
     {
-        var consumabili = personaggio.Inventario
-            .Where(i => i.Oggetto.Categoria == CategoriaOggetto.Consumabile)
-            .ToList();
+        var mosse = personaggio.Mosse; // Lista<Mossa>
 
         int pagina = 0;
         const int perPagina = 5;
@@ -731,30 +726,44 @@ class Program
         while (true)
         {
             Console.Clear();
-            MostraMessaggioCentratoWriteLine("======= CONSUMABILI =======");
-            Console.WriteLine();
+
+            List<string> righe = new List<string>();
+            righe.Add("======= MOSSE =======");
+            righe.Add("");
 
             int start = pagina * perPagina;
-            var paginaCorrente = consumabili
+            var paginaCorrente = mosse
                 .Skip(start)
                 .Take(perPagina)
                 .ToList();
 
             if (paginaCorrente.Count == 0)
-                MostraMessaggioCentratoWriteLine("Nessun consumabile in questa pagina.");
+            {
+                righe.Add("Nessuna mossa in questa pagina.");
+            }
             else
             {
                 for (int i = 0; i < paginaCorrente.Count; i++)
                 {
-                    var item = paginaCorrente[i];
+                    var mossa = paginaCorrente[i];
                     int numero = i + 1;
-
-                    string riga = $"[{numero}] X{item.Quantita} {item.Oggetto.Nome}";
-                    MostraMessaggioCentratoWriteLine(riga);
+                    string riga = $"[{numero}] {mossa.Nome}";
+                    righe.Add(riga);
                 }
             }
 
-            // Paginazione centrata
+            // Calcolo centratura verticale
+            int altezzaTotale = righe.Count + 1;
+            int posYInizio = (Console.WindowHeight / 2) - (altezzaTotale / 2);
+
+            // Stampa centrata
+            for (int i = 0; i < righe.Count; i++)
+            {
+                int x = Console.WindowWidth / 2 - righe[i].Length / 2;
+                int y = posYInizio + i;
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(righe[i]);
+            }
             StampaTasto("[F] Precedenti   [E] Prossimi   [Q] Indietro");
             char scelta = Console.ReadKey(true).KeyChar;
 
@@ -767,12 +776,12 @@ class Program
                 case '5':
                     int index = scelta - '1';
                     if (index < paginaCorrente.Count)
-                        MostraDettagliOggetto(paginaCorrente[index]);
+                        MostraDettagliMossa(paginaCorrente[index]);
                     break;
 
                 case 'E':
                 case 'e':
-                    if ((pagina + 1) * perPagina < consumabili.Count)
+                    if ((pagina + 1) * perPagina < mosse.Count)
                         pagina++;
                     break;
 
@@ -792,19 +801,141 @@ class Program
         }
     }
 
+    public static void MostraDettagliMossa(Mossa mossa)
+    {
+        Console.Clear();
+        string[] righeDettaglio = {
+            "======= DETTAGLI MOSSA =======",
+            "",
+            $"Nome: {mossa.Nome}",
+            $"Potenza: {mossa.PotenzaBase}",
+            $"Precisione: {mossa.PrecisioneBase}",
+            $"Critico: {mossa.ProbabilitaCritico}",
+        };
+        CicloForPerStampaCentrale(righeDettaglio);
+        TastoIndietro();
+    }
+
+    static void MostraPerCategoria(Personaggio personaggio, CategoriaOggetto categoria)
+    {
+        var oggettiCategoria = personaggio.Inventario
+            .Where(i => i.Oggetto.Categoria == categoria)
+            .ToList();
+
+        int pagina = 0;
+        const int perPagina = 5;
+        string nomeCategoria = GetNomeCategoria(categoria);
+
+        while (true)
+        {
+            Console.Clear();
+
+            List<string> righe = new List<string>();
+            righe.Add($"======= {nomeCategoria.ToUpper()} =======");
+            righe.Add("");
+
+            int start = pagina * perPagina;
+            var paginaCorrente = oggettiCategoria
+                .Skip(start)
+                .Take(perPagina)
+                .ToList();
+
+            if (paginaCorrente.Count == 0)
+                righe.Add($"Nessun {nomeCategoria.ToLower()} in questa pagina.");
+
+            else
+            {
+                for (int i = 0; i < paginaCorrente.Count; i++)
+                {
+                    var item = paginaCorrente[i];
+                    int numero = i + 1;
+                    string riga = $"[{numero}] X{item.Quantita} {item.Oggetto.Nome}";
+                    righe.Add(riga);
+                }
+            }
+
+            // Calcolare la posizione Y per centrare verticalmente
+            int altezzaTotale = righe.Count + 1; // +1 per lo spazio dei tasti
+            int posYInizio = (Console.WindowHeight / 2) - (altezzaTotale / 2);
+
+            // Stampare le righe centrate sia orizzontalmente che verticalmente
+            for (int i = 0; i < righe.Count; i++)
+            {
+                int x = Console.WindowWidth / 2 - righe[i].Length / 2;
+                int y = posYInizio + i;
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(righe[i]);
+            }
+            StampaTasto("[F] Precedenti   [E] Prossimi   [Q] Indietro");
+            char scelta = Console.ReadKey(true).KeyChar;
+
+            switch (scelta)
+            {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                    int index = scelta - '1';
+                    if (index < paginaCorrente.Count)
+                        MostraDettagliOggetto(paginaCorrente[index]);
+                    break;
+
+                case 'E':
+                case 'e':
+                    if ((pagina + 1) * perPagina < oggettiCategoria.Count)
+                        pagina++;
+                    break;
+
+                case 'F':
+                case 'f':
+                    if (pagina > 0)
+                        pagina--;
+                    break;
+
+                case 'Q':
+                case 'q':
+                    return;
+
+                default:
+                    continue;
+            }
+        }
+    }
+
+    static string GetNomeCategoria(CategoriaOggetto categoria)
+    {
+        return categoria switch
+        {
+            CategoriaOggetto.Consumabile => "Consumabili",
+            CategoriaOggetto.Offensivo => "Offensivi",
+            CategoriaOggetto.Materiale => "Materiali",
+            CategoriaOggetto.Arma => "Armi",
+            CategoriaOggetto.Elmo => "Elmi",
+            CategoriaOggetto.Corazza => "Corazze",
+            CategoriaOggetto.Gambali => "Gambali",
+            CategoriaOggetto.Stivali => "Stivali",
+            _ => "Oggetti"
+        };
+    }
+
     static void MostraDettagliOggetto(OggettoInventario item)
     {
         Console.Clear();
-        MostraMessaggioCentratoWriteLine("===== DETTAGLI OGGETTO =====");
-        Console.WriteLine();
-        MostraMessaggioCentratoWriteLine($"X{item.Quantita} {item.Oggetto.Nome}");
-        MostraMessaggioCentratoWriteLine($"Categoria: {item.Oggetto.Categoria}");
-        MostraMessaggioCentratoWriteLine($"Bonus Attacco: {item.Oggetto.BonusAttacco}");
-        MostraMessaggioCentratoWriteLine($"Bonus Difesa: {item.Oggetto.BonusDifesa}");
-        MostraMessaggioCentratoWriteLine($"Bonus Velocità: {item.Oggetto.BonusVelocita}");
-        MostraMessaggioCentratoWriteLine($"Bonus Salute: {item.Oggetto.BonusSalute}");
+        string[] righeDettaglio = {
+            "===== DETTAGLI OGGETTO =====",
+            "",
+            $"X{item.Quantita} {item.Oggetto.Nome}",
+            $"Categoria: {item.Oggetto.Categoria}",
+            $"Bonus Attacco: {item.Oggetto.BonusAttacco}",
+            $"Bonus Difesa: {item.Oggetto.BonusDifesa}",
+            $"Bonus Velocità: {item.Oggetto.BonusVelocita}",
+            $"Bonus Salute: {item.Oggetto.BonusSalute}"
+        };
+        CicloForPerStampaCentrale(righeDettaglio);
         TastoIndietro();
     }
+
 
     // ============================
     //       UTILITY
