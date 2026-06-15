@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj": {}
+    "c:\\Users\\sviluppatore\\Documents\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj": {
+    "c:\\Users\\sviluppatore\\Documents\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
+        "projectUniqueName": "c:\\Users\\sviluppatore\\Documents\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
         "projectName": "Gioco-di-ruolo",
-        "projectPath": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
+        "projectPath": "c:\\Users\\sviluppatore\\Documents\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
         "packagesPath": "C:\\Users\\sviluppatore\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\obj\\",
+        "outputPath": "c:\\Users\\sviluppatore\\Documents\\Gioco2D\\GiocoV1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sviluppatore\\AppData\\Roaming\\NuGet\\NuGet.Config"
