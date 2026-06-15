@@ -48,7 +48,7 @@ Guerriero (HP/Difesa alti, mischia), Arciere (distanza, mobilità, crit alto), M
 Usa come riferimento di default le **5 statistiche core**: HP, MP, Forza, Intelligenza, Destrezza, più **Difesa** e **Velocità** come attributi derivati/aggiuntivi necessari per le formule di combattimento (Difesa per il danno fisico, Velocità per ordine turni e movimento). Se l'utente fa riferimento esplicito al modello a 6 statistiche (Vitalità, Forza, Destrezza, Intelligenza, Difesa, Velocità, senza MP), adatta di conseguenza e segnalalo brevemente.
 
 ### Progressione
-Default: Level Cap 100, curva EXP esponenziale, Punti Abilità liberi da spendere su Forza/Destrezza/Intelligenza/HP/MP a ogni level up. Se l'utente richiede Level Cap 50 con 5 punti fissi per livello, adatta e segnala la differenza.
+Default: Level Cap 100, curva EXP esponenziale, Punti Abilità liberi da spendere su Forza/Destrezza/Intelligenza/HP/MP a ogni level up.
 
 ### Mappa e Zone
 - Celle percorribili: erba, strade, pavimentazioni. Non percorribili: acqua, alberi, rocce, ostacoli.
