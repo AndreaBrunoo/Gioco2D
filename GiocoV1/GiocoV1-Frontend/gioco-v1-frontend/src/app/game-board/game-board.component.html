@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Stato del Gioco</h1>
+
+  <div *ngIf="loading" class="loading">
+    Caricamento...
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="gameState && !loading" class="game-state">
+    <h2>Personaggio: {{ gameState?.personaggio?.nome }}</h2>
+    <p>Livello: {{ gameState?.personaggio?.livello }} | Esperienza: {{ gameState?.personaggio?.esperienza }}</p>
+    <p>Salute: {{ gameState?.personaggio?.saluteAttuale }} / {{ gameState?.personaggio?.saluteMassima }}</p>
+    <p>Attacco: {{ gameState?.personaggio?.attacco }} | Difesa: {{ gameState?.personaggio?.difesa }} | Velocità: {{ gameState?.personaggio?.velocita }}</p>
+    <p>Monete: {{ gameState?.personaggio?.monete }} | Punti Abilità: {{ gameState?.personaggio?.puntiAbilita }}</p>
+    <p>Posizione: ({{ gameState?.posizioneX }}, {{ gameState?.posizioneY }}) - Area: {{ gameState?.areaCorrente }}</p>
+
+    <div class="actions">
+      <button (click)="performAction('moveup')">↑ Su</button>
+      <button (click)="performAction('movedown')">↓ Giù</button>
+      <button (click)="performAction('moveleft')">← Sinistra</button>
+      <button (click)="performAction('moveright')">→ Destra</button>
+    </div>
+  </div>
+</div>

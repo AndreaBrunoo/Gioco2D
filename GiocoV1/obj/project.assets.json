@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sviluppatore\\Documents\\Progetto Videgioco 2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
+      "projectUniqueName": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
       "projectName": "Gioco-di-ruolo",
-      "projectPath": "C:\\Users\\sviluppatore\\Documents\\Progetto Videgioco 2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
+      "projectPath": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\Gioco-di-ruolo.csproj",
       "packagesPath": "C:\\Users\\sviluppatore\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sviluppatore\\Documents\\Progetto Videgioco 2D\\Gioco2D\\GiocoV1\\obj\\",
+      "outputPath": "C:\\Users\\sviluppatore\\Documents\\Gioco-di-ruolo2D\\Gioco2D\\GiocoV1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sviluppatore\\AppData\\Roaming\\NuGet\\NuGet.Config"

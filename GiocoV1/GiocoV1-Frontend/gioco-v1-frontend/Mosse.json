@@ -1,0 +1,16 @@
+{
+  "Mosse": [
+    {
+      "Nome": "Fendente",
+      "PotenzaBase": 5,
+      "PrecisioneBase": 100,
+      "ProbabilitaCritico": 10
+    },
+    {
+        "Nome": "Frustata",
+        "PotenzaBase": 5,
+        "PrecisioneBase": 75,
+        "ProbabilitaCritico": 5
+    }
+  ]
+}

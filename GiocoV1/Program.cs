@@ -645,6 +645,22 @@ class Program
     // ------------------------------
     //  UI DINAMICA
     // ------------------------------
+    private static ConsoleColor GetTerrainColor(TipoTerreno terreno)
+    {
+        return terreno switch
+        {
+            TipoTerreno.Mare => ConsoleColor.Blue,
+            TipoTerreno.Erba => ConsoleColor.Green,
+            TipoTerreno.Albero => ConsoleColor.DarkGreen,
+            TipoTerreno.Sasso => ConsoleColor.Gray,
+            TipoTerreno.Montagna => ConsoleColor.DarkGray,
+            TipoTerreno.Sabbia => ConsoleColor.Yellow,
+            TipoTerreno.Acqua => ConsoleColor.Cyan,
+            TipoTerreno.Nevischio => ConsoleColor.White,
+            _ => ConsoleColor.DarkGray,
+        };
+    }
+
     public static void DisegnaMiniMappa(Cella?[,] griglia, int px, int py)
     {
         const int raggio = 2; // 5x5
@@ -668,7 +684,11 @@ class Program
                          x >= 0 && x < griglia.GetLength(1) &&
                          griglia[y, x] != null)
                 {
-                    Console.Write("■ ");
+                    var terreno = griglia[y, x]!.Tipo;
+                    var bg = GetTerrainColor(terreno);
+                    Console.BackgroundColor = bg;
+                    Console.Write("  "); // two spaces for square
+                    Console.ResetColor();
                 }
                 else
                 {

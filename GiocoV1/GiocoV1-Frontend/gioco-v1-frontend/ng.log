@@ -1,0 +1,182 @@
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m        [2m | [22m[1mRaw size[22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m         [2m | [22m[36m60.80 kB[39m[2m | [22m
+[32mstyles.css[39m         [2m | [22m[2mstyles[22m       [2m | [22m[36m95 bytes[39m[2m | [22m
+
+[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m[1m60.90 kB[22m
+
+Application bundle generation complete. [2.447 seconds] - 2026-06-25T13:34:12.484Z
+
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:13:35:
+[37m      13 │     <h2>Personaggio: {{ gameState?.[32mpersonaggio[37m?.nome }}</h2>
+         ╵                                    [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:14:30:
+[37m      14 │ ...<p>Livello: {{ gameState?.[32mpersonaggio[37m?.livello }} | Esperienza:...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:14:82:
+[37m      14 │ ...ello }} | Esperienza: {{ gameState?.[32mpersonaggio[37m?.esperienza }}</p>
+         ╵                                        [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:15:29:
+[37m      15 │     <p>Salute: {{ gameState?.[32mpersonaggio[37m?.saluteAttuale }} / {{ ga...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:15:75:
+[37m      15 │ ...saluteAttuale }} / {{ gameState?.[32mpersonaggio[37m?.saluteMassima }}</p>
+         ╵                                     [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:16:30:
+[37m      16 │ ...<p>Attacco: {{ gameState?.[32mpersonaggio[37m?.attacco }} | Difesa: {{ ...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:16:78:
+[37m      16 │ ...} | Difesa: {{ gameState?.[32mpersonaggio[37m?.difesa }} | Velocità: {...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:16:127:
+[37m      16 │ ....difesa }} | Velocità: {{ gameState?[32m.personaggi[37mo?.velocita }}</p>
+         ╵                                        [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:17:29:
+[37m      17 │     <p>Monete: {{ gameState?.[32mpersonaggio[37m?.monete }} | Punti Abilit...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:17:83:
+[37m      17 │ ...} | Punti Abilità: {{ gameState?[32m.personaggi[37mo?.puntiAbilita }}</p>
+         ╵                                    [32m~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:18:33:
+[37m      18 │ ...>Posizione: ({{ gameState?.[32mposizioneX[37m }}, {{ gameState?.posizio...
+         ╵                               [32m~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:18:62:
+[37m      18 │ ...sizioneX }}, {{ gameState?.[32mposizioneY[37m }}) - Area: {{ gameState?...
+         ╵                               [32m~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8107: NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. Find more at https://v21.angular.dev/extended-diagnostics/NG8107[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/game-board/game-board.component.html:18:99:
+[37m      18 │ ...ameState?.posizioneY }}) - Area: {{ gameState?.[32mareaCorrente[37m }}</p>
+         ╵                                                   [32m~~~~~~~~~~~~[0m
+
+  Warning occurs in the template of component GameBoardComponent.
+
+    src/app/game-board/game-board.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./game-board.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m

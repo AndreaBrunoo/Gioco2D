@@ -1,0 +1,8 @@
+{
+  "/game": {
+    "target": "http://localhost:5210",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
